@@ -5,35 +5,42 @@
 }
 header{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 103px 10px 82px;
-     /*  acima - direita - abaixo - esquerda */
     background: #2E948A;
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
-    flex-wrap: wrap;
-    
+  
 }
-header ul{
+.header ul{
     display: flex;
     list-style: none;
 }
-header ul li{
+.header ul li{
     padding: 0px 10px;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
 }
-header ul a{
+.header ul a{
     text-decoration: none;
     color: white;
 }
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px 10px 0px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1336px;
+    margin: auto;
+}
 
-.contato{
+.contato {
     display: flex;
     flex-direction: column;
-    padding: 120px 30px 40px 90px;
+    padding: 120px 0px 40px 0px;
+    max-width: 450px;
+    width: 100%;
 }
 .formulario{
     font-style: normal;
@@ -46,19 +53,24 @@ header ul a{
     background: #FFFFFF;
     border: 1px solid #686868;
     border-radius: 7px;
-    width: 450px;
+    width: 100%;
+}
+.nome-email{
+    
     height: 25px;
     margin-top: 15px;
-
+    display: flex;
 }
 .mensagem textarea{
 
     background: #FFFFFF;
     border: 1px solid #686868;
     border-radius: 7px;
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
     margin-top: 15px;
     height: 200px;
+
    
 }
 button{
@@ -81,9 +93,24 @@ button a{
 }
 .conteudo{
     display: flex;
+    max-width: 1336px;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+
+}
+main{
+ padding-left: 10px;
 }
 .img{
+    position: relative;
     padding: 120px 0px 0px 40px;
+
+}
+.img img{
+    height: 400px;
+    width: 400px;
 }
 footer{
     display: flex;
@@ -93,6 +120,7 @@ footer{
     padding: 25px 110px 25px 108px;
      /*  acima - direita - abaixo - esquerda */
     background: #2E948A;
+    flex-wrap: wrap-reverse;
 }
 footer {
     list-style: none;
@@ -102,7 +130,6 @@ footer {
     line-height: 18px;
         
 }
-
 
 footer ol li a{
     text-decoration: none;
@@ -132,4 +159,50 @@ footer button{
 footer ul a{
     text-decoration: none;
     color: #FFFFFF;
+}
+
+/* responsividade */
+
+@media (min-width: 578px)  and (max-width: 998px){
+    .conteudo{
+        justify-content: center;
+    }
+
+    .img{
+        position: relative;
+        padding: 160px 0px 0px 40px;       
+}
+    .img img {
+        height: 350px;
+        width: 350px;   
+}
+.header{
+    justify-content: center;
+}
+}
+
+@media (max-width: 375px) {
+    
+
+    .img{
+        position: relative;
+        padding: 0px 0px 0px 0px;       
+}
+    .img img {
+        height: 200px;
+        width: 200px;   
+}
+.header{
+    justify-content: center;
+}
+.contato{
+    padding: 20px 0px 40px 0px;
+}
+footer ol{
+    font-size: 10px;
+}
+footer{
+    padding: 25px 0px 25px 0px;
+    justify-content: center;
+}
 }

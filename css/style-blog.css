@@ -190,3 +190,33 @@ footer ul a{
 
 
 
+@media (min-width: 320px) and (max-width: 768px){
+   
+*{
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    
+}   
+.conteiner .banner p {
+    width: 100%;
+}
+    .header{
+        justify-content: center;
+    }
+    .header ul li{
+        font-size: 15px;
+    }
+    .header img{
+        width: 200px;
+ 
+    }
+
+    footer ol{
+        font-size: 10px;
+    }
+    footer{
+        padding: 25px 0px 25px 0px;
+        
+    }
+}
